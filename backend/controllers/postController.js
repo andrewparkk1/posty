@@ -3,7 +3,7 @@ const Post = require("../models/postModel")
 
 const getPosts = asyncHandler(async (req, res) => {
     const posts = await Post.find()
-    res.status(200).json(posts)
+    res.status(200).setHeader('Content-Type', 'application/json').json(posts)
 })
 
 const addPost = asyncHandler(async (req, res) => {
