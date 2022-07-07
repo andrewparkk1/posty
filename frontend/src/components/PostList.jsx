@@ -16,8 +16,13 @@ function PostList() {
                 return res.json()
             }
         })
-            .then(jsonRes => setPostList(jsonRes))
+            .then(jsonRes => {
+                console.log("in the then")
+                console.log(jsonRes)
+                setPostList(jsonRes)
+            })
             .catch((error) => {
+                console.log("there is error")
                 console.log(error);
             });
     }, [])
