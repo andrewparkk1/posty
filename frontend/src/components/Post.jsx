@@ -6,10 +6,10 @@ function Post({post}) {
 
     return (
         <div>
-            <div class="card bg-base-300 shadow-xl">
-                <div class="card-body">
+            <div className="card bg-base-300 shadow-xl">
+                <div className="card-body">
                     <div className='flex flex-row justify-between'>
-                        <h2 class="card-title">{post.title}</h2>
+                        <h2 className="card-title">{post.title}</h2>
                         <h3>{date}</h3>
                     </div>
                     <h3>{post.name} : {year} </h3>

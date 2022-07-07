@@ -3,18 +3,18 @@ import Post from './Post'
 import axios from "axios"
 import {getPosts} from '../features/postService'
 
-
 function PostList() {
 
     const [postList, setPostList] = useState([])
 
     useEffect(() => {
-        fetch("http://localhost:5000/").then(res => {
+        fetch("/posts").then(res => {
             if (res.ok) {
                 return res.json()
             }
         }).then(jsonRes => setPostList(jsonRes))
-    })
+        return
+    }, [postList])
 
     return (
         <>
