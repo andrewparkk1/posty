@@ -9,7 +9,7 @@ function PostList() {
 
     useEffect(() => {
         console.log("get json")
-        fetch("/posts/").then(res => {
+        fetch("/api/posts").then(res => {
             if (res.ok) {
                 return res.json()
             }
