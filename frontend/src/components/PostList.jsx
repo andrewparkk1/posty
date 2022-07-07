@@ -13,18 +13,19 @@ function PostList() {
             console.log("in the fetch")
             if (res.ok) {
                 console.log("res is ok")
-                return res.json()
+                console.log(res.json())
+                // return res.json()
             }
         })
-            .then(jsonRes => {
-                console.log("in the then")
-                console.log(jsonRes)
-                setPostList(jsonRes)
-            })
-            .catch((error) => {
-                console.log("there is error")
-                console.log(error);
-            });
+            // .then(jsonRes => {
+            //     console.log("in the then")
+            //     console.log(jsonRes)
+            //     setPostList(jsonRes)
+            // })
+            // .catch((error) => {
+            //     console.log("there is error")
+            //     console.log(error);
+            // });
     }, [])
 
     return (
