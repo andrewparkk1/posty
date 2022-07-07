@@ -13,8 +13,6 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 
-console.log(process.env.MONGO_URI)
-
 
 // connectDB()
 
@@ -24,7 +22,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: false }));
 
 
-mongoose.connect(process.env.MONGO_URI)
+mongoose.connect(process.env.MONGODB_URI)
     .then(() => {
         app.listen(port, () => {
             console.log(`listening on port ${port}`)
