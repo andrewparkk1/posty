@@ -8,7 +8,7 @@ function PostList() {
     const [postList, setPostList] = useState([])
 
     useEffect(() => {
-        fetch("/posts").then(res => {
+        fetch("/posts/").then(res => {
             if (res.ok) {
                 return res.json()
             }

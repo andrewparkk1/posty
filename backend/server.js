@@ -16,7 +16,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: false }));
 
 
-app.use("/posts", require("./routes/postRoute"))
+app.use("/posts/", require("./routes/postRoute"))
 
 // Serve frontend
 if (process.env.NODE_ENV === 'production') {
