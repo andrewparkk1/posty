@@ -10,7 +10,9 @@ function PostList() {
     useEffect(() => {
         console.log("get json")
         fetch("/api/posts").then(res => {
+            console.log("in the fetch")
             if (res.ok) {
+                console.log("res is ok")
                 return res.json()
             }
         })
