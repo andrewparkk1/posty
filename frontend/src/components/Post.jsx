@@ -7,7 +7,7 @@ function Post({ post }) {
 
     let date = new Date(post.createdAt).toLocaleDateString()
     let year = new Date(post.year).getFullYear() + 1
-    let num = 350
+    let num = 250
 
     const onClick = () => {
         setCollapse(prevState => {
