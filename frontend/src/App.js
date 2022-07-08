@@ -3,10 +3,16 @@ import PostList from "./components/PostList";
 
 function App() {
   return (
-    <div >
-      <Header></Header>
-      <PostList></PostList>
-    </div>
+    <>
+
+      <div className="p-5 mb-20 md:w-10/12 mx-auto">
+        <Header></Header>
+        <PostList></PostList>
+      </div>
+
+    </>
+
+
   );
 }
 

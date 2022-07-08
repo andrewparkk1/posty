@@ -10,7 +10,7 @@
         }
     ],
     "rewrites": [{
-        "source": "/backend/(.*)",
-        "destination": "/backend"
+        "source": "/(.*)",
+        "destination": "/backend/server.js"
     }]
 }

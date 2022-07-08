@@ -1,7 +1,5 @@
 import { useState, useEffect } from 'react'
 import Post from './Post'
-import axios from "axios"
-import { getPosts } from '../features/postService'
 
 function PostList() {
 
@@ -27,11 +25,14 @@ function PostList() {
             });
     }, [])
 
+
     return (
         <>
-            <div className='box-border grid grid-cols-4 auto-rows-[13.3rem] gap-x-12 gap-y-2 w-9/12 mx-auto'>
+
+            <div className='box-border grid place-items-stretch sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-6 lg:gap-10 gap-y-6'>
+                {/* <div className='mx-auto sm:columns-1 md:columns-2 lg:columns-3 gap-7'> */}
                 {postList.map(post => {
-                    return <Post post={post} key={post._id}></Post>
+                    return <Post post={post} key={post._id} className="inline-block box-border"></Post>
                 })}
             </div>
         </>
