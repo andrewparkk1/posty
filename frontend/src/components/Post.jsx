@@ -6,7 +6,7 @@ function Post({ post }) {
     const [collapse, setCollapse] = useState(true)
 
     let date = new Date(post.createdAt).toLocaleDateString()
-    let year = new Date(post.year).getFullYear()
+    let year = new Date(post.year).getFullYear() + 1
     let num = 240
 
     const onClick = () => {

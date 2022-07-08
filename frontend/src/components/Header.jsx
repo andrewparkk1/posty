@@ -42,7 +42,6 @@ function Header() {
         })
     }
 
-
     return (
         <div>
             <div className='flex flex-row justify-between items-center pb-5'>
